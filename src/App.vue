@@ -3,7 +3,7 @@
   <input type="text" id="drp-input-start" readonly @click="openPicker = !openPicker"
     :value="selectedDates.start?.toDateString()" />
   <input type="text" id="drp-input-end" readonly @click="openPicker = !openPicker"
-    :value="selectedDates.end?.toDateString()" />
+    :value="selectedDates.end?.toDateString()" :disabled="!isRangePicker" />
   <DRP :isRangePicker="isRangePicker" :openPicker="openPicker" @closePicker="openPicker = false"
     @selectedDates="showDates" />
 </template>
